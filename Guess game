@@ -1,0 +1,20 @@
+from random import shuffle
+def shuffle_list(list):
+    shuffle(list)
+    return list
+def guess():
+    playerguess=int(input("Enter your guess 0, 1 or 2: "))
+    while playerguess not in [0,1,2]:
+        print("Guess between 0 and 2\nTry again!")
+        playerguess=int(input("Enter your guess 0, 1 or 2: "))
+    comp=[' ','O',' ']
+    result=shuffle_list(comp)
+    if result[playerguess]=="O":
+        print("Correct Guess")
+        print(result)
+    else:
+        print("Worng Guess!")
+        print(result)
+guess()
+    
+    
